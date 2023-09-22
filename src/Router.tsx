@@ -9,6 +9,8 @@ export function Router(){
             <Route path="/" element={<DefaultLayout/>}>
                 <Route path="/" element={<Home/>} />
                 <Route path="/history" element={<History/>}/>
+                <Route path="/login" element={<Login/>}
+                <Route path="/profiles" element={<Profiles/>}
             </Route>
         </Routes>
     );
