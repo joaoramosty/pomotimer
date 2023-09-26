@@ -1,6 +1,8 @@
 import { Route,Routes } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { History } from "./pages/History";
+import { Login } from "./pages/Login";
+import { Profiles } from "./pages/Profiles";
 import { DefaultLayout } from './layouts/DefaultLayout';
 export function Router(){
     return(
@@ -9,8 +11,8 @@ export function Router(){
             <Route path="/" element={<DefaultLayout/>}>
                 <Route path="/" element={<Home/>} />
                 <Route path="/history" element={<History/>}/>
-                <Route path="/login" element={<Login/>}
-                <Route path="/profiles" element={<Profiles/>}
+                <Route path="/login" element={<Login/>}/>
+                <Route path="/profiles" element={<Profiles/>}/>
             </Route>
         </Routes>
     );
