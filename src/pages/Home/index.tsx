@@ -8,7 +8,7 @@ export function Home() {
           <FormContainer>
 
             <label htmlFor="text">Vou focar em </label>
-            <TaskInput id="text" type="text" placeholder="Dê um nome ao seu projeto do momento"/>
+            <TaskInput id="text" type="text" placeholder="Dê um nome ao seu projeto atual"/>
 
 
             <label htmlFor="minutesAmount" >durante</label>
