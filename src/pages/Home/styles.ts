@@ -92,7 +92,7 @@ export const StartCountDownButton=styled.button`
     align-items: center;
     justify-content: center;
     padding: 1rem;
-    border: 8px;
+    border-radius: 8px;
     gap:.5rem;
     font-weight: bold;
     cursor: pointer;
