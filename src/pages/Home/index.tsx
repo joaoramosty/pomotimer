@@ -1,7 +1,7 @@
 import {Play } from "@phosphor-icons/react";
 import {useForm} from "react-hook-form"
 import {zodResolver} from "@hookform/resolvers/zod"
-import * as zod from "zod"
+import * as zod from "zod" //for don´t atribute to mine
 import {HomeContainer,
   FormContainer,
   CountDownContainer,
@@ -15,8 +15,8 @@ const newCycleFormValidationSchema = zod.object({
     task: zod.string().min(1,"informe a tarefa"),
     MinutesAmount: zod
     .number()
-    .min(5)
-    .max(90),
+    .min(5,"O ciclo precisa ser de no mínimo 5 minutos")
+    .max(90,"O ciclo precisa ser de no mínimo 5 minutos"),
 })
 
 type NewCycleFormData = zod.infer<typeof newCycleFormValidationSchema>
@@ -29,7 +29,8 @@ interface Cycle{
 }
 
 
-export function Home() {
+export function Home() { 
+  
     
     const [cycles,setCycles] = useState<Cycle[]>([])
     const [activeCycleId, setActiveCycleId] =useState<string | null >(null)
@@ -37,15 +38,15 @@ export function Home() {
 
     const {register,handleSubmit,watch,reset} = useForm<NewCycleFormData>({
       resolver:zodResolver(newCycleFormValidationSchema),
-      defaultValues:{
+      defaultValues: {
         task:'',
-        minutesAmount:0,
+        minutesAmount:0
       }
     })
 
     function handleCreateNewCycle(data:NewCycleFormData){
       const id = String(new Date().getTime())
-      const newCycle:Cycle={
+      const newCycle: Cycle ={
         id,
         task:data.task,
         minutesAmount:data.MinutesAmount,
