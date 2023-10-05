@@ -57,6 +57,8 @@ export function Countdown() {
   useEffect(() => {
     if (activeCycle) {
       document.title = `${minutes}:${seconds}`
+    }else{
+      document.title = `PomoTimer`
     }
   }, [minutes, seconds, activeCycle])
 
