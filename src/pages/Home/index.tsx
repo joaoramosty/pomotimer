@@ -120,6 +120,8 @@ export function Home() {
   useEffect(()=>{
     if(activeCycle){
       document.title =`${minutes}:${seconds}`
+    }else{
+      document.title = ''
     }
   },[minutes,seconds,activeCycle])
   const task = watch('task')
