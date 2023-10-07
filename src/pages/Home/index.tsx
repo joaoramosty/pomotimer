@@ -13,10 +13,7 @@ import { NewCycleForm } from './components/NewCycleForm'
 import { Countdown } from './components/Countdown'
 import { CyclesContext } from '../../contexts/CyclesContext'
 
-export interface extends {
-   activeCycle: number 
 
-}
 
 const newCycleFormValidationSchema = zod.object({
   task: zod.string().min(1, 'Informe a tarefa'),
