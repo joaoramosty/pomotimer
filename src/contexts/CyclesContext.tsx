@@ -56,6 +56,10 @@ export function CyclesContextProvider({
     )
   }
 
+  // function createInterval{
+  //   const startDate = String(new Date().getTime)
+  // }
+
   function createNewCycle(data: CreateCycleData) {
     const id = String(new Date().getTime())
 

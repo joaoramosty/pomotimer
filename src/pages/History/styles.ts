@@ -80,7 +80,7 @@ export const Status = styled.span<StatusProps> `
         content: '';
         width: .5rem;
         height: .5rem;
-        border-radius: 50%;
+        border-radius: 9999999px;
         background: ${(props)=> props.theme[STATUS_COLORS[props.statusColor]]};
     }
 `;     
